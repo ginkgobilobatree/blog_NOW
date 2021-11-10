@@ -1,9 +1,12 @@
-console.log('____________________connected____________________\n\n\n\n\n\n\n\n')
+console.log('____________________connected____________________\n\n\n')
 
-let button = document.querySelector('#button'),
+let button = document.querySelector('#button');
     title = document.querySelector('#title'),
     blog = document.querySelector('#textarea'),
-    userId = document.querySelector('#userId');
+    userId = document.querySelector('#userId'),
+    pContainer = document.querySelector('#paragraph');
+
+
 
 function submit() {
     fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -24,6 +27,11 @@ function submit() {
 button.addEventListener('click', (e) => {
     e.preventDefault();
     submit();
+
+    let p = document.createElement('p');
+    p.innerHTML = `#${userId.value} ${title.value.toUpperCase()} "${blog.value}"`;
+    pContainer.appendChild(p);
+
     title.value = '';
     blog.value = '';
     userId.value = '';

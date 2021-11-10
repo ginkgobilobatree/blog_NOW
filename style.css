@@ -27,6 +27,21 @@ div#hero {
     background: url(./img/pointingZ.png) center/100% no-repeat;
 }
 
+div#paragraph {
+    position: absolute;
+    left: 54vw;
+    top: 56vh;
+}
+
+p {
+    padding: 6px;
+    color: whitesmoke;
+    font-size: 12px;
+    border-radius: 6px;
+    background-color: #1a1a1a;
+    margin-bottom: 2px;
+}
+
 h1 {
     margin-bottom: 4vh;
     color: white;
