@@ -1,0 +1,103 @@
+:root {
+    font-size: 80.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6rem;
+    height: 100vh;
+    background-color: rgb(71, 75, 82);
+    overflow-y: hidden;
+}
+
+div#hero {
+    -webkit-filter: drop-shadow(3px 4px 5px #d6d6d6) drop-shadow(-3px -4px 7px #d6d6d6);
+    position: absolute;
+    left: 60vw;
+    top: 10vh;
+    width: 500px;
+    height: 500px;
+    background: url(./img/pointingZ.png) center/100% no-repeat;
+}
+
+h1 {
+    margin-bottom: 4vh;
+    color: white;
+}
+
+span {
+    display: block;
+    margin-left: 20vw;
+    font-size: 80px;
+    animation: glow 1s infinite alternate ease-in-out;
+}
+
+@keyframes glow {
+
+    from {
+        transform: scale(1) rotate(0deg);
+        color: white;
+    }
+    
+    to {
+        transform: scale(1.6) rotate(20deg);
+        color: #fd365e;
+    }
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 10vh 0 0 25vw;
+}
+
+label, #button {
+    margin: 3vh 0 1vh 0;
+}
+
+label {
+    color: white;
+}
+
+#userId {
+    width: 10vw;
+}
+
+#userId:focus, #title:focus, #textarea:focus {
+    box-shadow: 4px 4px 5px red;
+}
+
+#title {
+    width: 15vw;
+}
+
+#button {
+    padding: 6px 9px;
+    cursor: pointer;
+    background-color: #56999c;
+    font-size: large;
+}
+
+#button:hover {
+    background-color: #568a8d;
+}
+
+#button:active {
+    background-color: #86babd;
+}
+
+#textarea, input {
+    padding: 6px;
+    border: none;
+    background-color: #77babd;
+    border-radius: 6px;
+}
