@@ -1,11 +1,9 @@
 console.log('____________________connected____________________\n\n\n\n\n\n\n\n')
 
-let button = document.querySelector('#button');
-/*     form = document.querySelector('form'), */
-let title = document.querySelector('#title');
-let blog = document.querySelector('#textarea');
-let userId = document.querySelector('#userId');
-
+let button = document.querySelector('#button'),
+    title = document.querySelector('#title'),
+    blog = document.querySelector('#textarea'),
+    userId = document.querySelector('#userId');
 
 function submit() {
     fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -26,4 +24,7 @@ function submit() {
 button.addEventListener('click', (e) => {
     e.preventDefault();
     submit();
+    title.value = '';
+    blog.value = '';
+    userId.value = '';
 });
