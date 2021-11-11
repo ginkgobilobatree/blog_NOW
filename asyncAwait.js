@@ -26,8 +26,13 @@ function submit() {
             'Content-type': 'application/json; charset=UTF-8',
         },
     })
-        .then((response) => response.json())
-        .then((json) => console.log(json));
+}
+
+async function doWork() {
+    const response = submit()
+    response.json();
+    const json = await response()
+    console.log(json)
 }
 
 function grabData() {
